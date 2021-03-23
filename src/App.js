@@ -1,15 +1,15 @@
-import React from 'react'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 
-import Home from './Home'
-import Game from './Game'
-import './App.css';
+import Home from "./Home";
+import Game from "./Game";
+import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
-      <Route exact path="/" component={Home}/>
-      <Route path="/game" component={Game}/>
+      <Route exact path="/" component={Home} />
+      <Route path="/game" component={Game} />
     </BrowserRouter>
   );
 }
