@@ -1,5 +1,11 @@
 .home {
   color: #1f628d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 
 .start-game {

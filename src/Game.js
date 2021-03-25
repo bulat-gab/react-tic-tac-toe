@@ -33,8 +33,12 @@ export default class Game extends Component {
 
     return (
       <div className="game">
-        <Player value="X" myTurn={this.state.xIsNext} color="blue" />
-        <Player value="O" myTurn={!this.state.xIsNext} color="pink" />
+        <div className="player-header">
+          <Player value="X" myTurn={this.state.xIsNext} color="blue" />
+          <Player value="O" myTurn={!this.state.xIsNext} color="pink" />
+        </div>
+        {/* <Player value="X" myTurn={this.state.xIsNext} color="blue" />
+        <Player value="O" myTurn={!this.state.xIsNext} color="pink" /> */}
 
         {!winner ? (
           <Board
