@@ -18,6 +18,8 @@
   padding: 10px 20px 10px 20px;
   border: solid #1f628d 2px;
   text-decoration: none;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 .btn:hover {

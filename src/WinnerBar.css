@@ -1,4 +1,13 @@
 .winner-bar {
   font-weight: bold;
   font-size: 40px;
+  margin-top: 10px;
+}
+
+.winner {
+  margin-right: 10px;
+}
+
+img {
+  margin-bottom: 5px;
 }
