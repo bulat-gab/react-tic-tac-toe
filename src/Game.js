@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Board from "./Board";
-import DrawBar from "./DrawBar";
-import "./Game.css";
-import WinnerBar from "./WinnerBar";
 import Player from "./Player";
-import { calculateWinner, isFullBoard } from "./utils";
+import GameEndBar from "./GameEndBar";
+import { calculateWinner, isBoardFull } from "./utils";
+import "./Game.css";
 
 export default class Game extends Component {
   constructor(props) {
@@ -38,19 +37,13 @@ export default class Game extends Component {
 
   render() {
     const winner = calculateWinner(this.state.squares);
-    const draw = !winner && isFullBoard(this.state.squares);
+    const draw = !winner && isBoardFull(this.state.squares);
 
     let content;
-    if (winner) {
+    if (winner || draw) {
       content = (
-        <WinnerBar
-          value={winner}
-          color={winner === "X" ? "blue" : "pink"}
-          onClick={() => this.restartGame()}
-        />
+        <GameEndBar winner={winner} onClick={() => this.restartGame()} />
       );
-    } else if (draw) {
-      content = <DrawBar onClick={() => this.restartGame()} />;
     } else {
       content = (
         <Board

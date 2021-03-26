@@ -1,21 +1,17 @@
 import React from "react";
-import GameEndBar from "./GameEndBar";
-import "./GameEndBar.css";
+import "./WinnerBar.css";
 
 export default function WinnerBar(props) {
-  const playerColor = {
-    color: props.color,
+  const style = {
+    color: props.winner === "X" ? "blue" : "pink",
   };
 
   return (
-    <div>
-      <div className="winner-bar">
-        <span className="winner" style={playerColor}>
-          {props.value}
-        </span>
-        Win!
-      </div>
-      <GameEndBar onClick={props.onClick} />
+    <div className="winner-bar">
+      <span className="winner" style={style}>
+        {props.winner}
+      </span>
+      Win!
     </div>
   );
 }

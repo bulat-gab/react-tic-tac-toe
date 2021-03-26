@@ -2,8 +2,7 @@
   margin-left: 20px;
 }
 
-.draw-bar,
-.winner-bar {
+.draw-bar {
   font-weight: bold;
   font-size: 40px;
 }
