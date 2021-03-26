@@ -1,3 +1,32 @@
 .game-end-bar {
   margin-left: 20px;
 }
+
+.draw-bar,
+.winner-bar {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.btn {
+  -webkit-border-radius: 25;
+  -moz-border-radius: 25;
+  border-radius: 25px;
+  font-family: Arial;
+  color: #7b8da0;
+  font-size: 17px;
+  background: #ffffff;
+  padding: 10px 20px 10px 20px;
+  border: solid #1f628d 2px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #cee0ec;
+  text-decoration: none;
+}
+
+.btn:focus {
+  border: none;
+  outline: none;
+}

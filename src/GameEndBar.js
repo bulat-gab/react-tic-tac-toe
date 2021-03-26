@@ -3,27 +3,13 @@ import { Link } from "react-router-dom";
 import "./GameEndBar.css";
 
 export default function GameEndBar(props) {
-  function refreshPage() {
-    window.location.reload(false);
-  }
-
-  const playerColor = {
-    color: props.color,
-  };
-
   return (
     <div className="game-end-bar">
-      <div>
-        <span className="winner" style={playerColor}>
-          {props.value}
-        </span>
-        Win!
-      </div>
-      <button className="restart" onClick={refreshPage}>
+      <button className="btn restart" onClick={props.onClick}>
         Restart
       </button>
       <Link to="/">
-        <button>Go to menu</button>
+        <button className="btn go-to-menu">Go to menu</button>
       </Link>
     </div>
   );
